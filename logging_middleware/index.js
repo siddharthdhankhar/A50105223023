@@ -36,7 +36,6 @@ async function Log(stack, level, pkgName, message) {
     }
 }
 
-// Universal Export for both Node.js and React
 if (typeof module !== 'undefined') {
     module.exports = { Log };
 }

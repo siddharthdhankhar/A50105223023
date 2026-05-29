@@ -3,7 +3,6 @@ import 'logging_middleware';
 const Log = window.Log;
 import { Container, Grid, Card, CardContent, Typography, Chip, Select, MenuItem, FormControl, InputLabel, Box, AppBar, Toolbar, Badge, Button } from '@mui/material';
 
-// 🚨 PASTE YOUR BRAND NEW TOKEN HERE
 const ACCESS_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiYXVkIjoiaHR0cDovLzIwLjI0NC41Ni4xNDQvZXZhbHVhdGlvbi1zZXJ2aWNlIiwiZW1haWwiOiJzaWRkaGFydGg4QHMuYW1pdHkuZWR1IiwiZXhwIjoxNzgwMDQwMjA4LCJpYXQiOjE3ODAwMzkzMDgsImlzcyI6IkFmZm9yZCBNZWRpY2FsIFRlY2hub2xvZ2llcyBQcml2YXRlIExpbWl0ZWQiLCJqdGkiOiJiMWVkN2MwOS0yZGUzLTQ3YTYtOGVjZS00ZTMwY2U0MTZkOWUiLCJsb2NhbGUiOiJlbi1JTiIsIm5hbWUiOiJzaWRkaGFydGgiLCJzdWIiOiJiZjczYTNhNC0zZWM1LTRjOGQtODIwZS0xMDM0YmNiYmE3MGUifSwiZW1haWwiOiJzaWRkaGFydGg4QHMuYW1pdHkuZWR1IiwibmFtZSI6InNpZGRoYXJ0aCIsInJvbGxObyI6ImE1MDEwNTIyMzAyMyIsImFjY2Vzc0NvZGUiOiJKR0pzVVQiLCJjbGllbnRJRCI6ImJmNzNhM2E0LTNlYzUtNGM4ZC04MjBlLTEwMzRiY2JiYTcwZSIsImNsaWVudFNlY3JldCI6ImdzVXVlUFZ0V2h1Zlp3UnEifQ.LY0QIJEU1NrAyM3ZsIeexkeyeanFRHMTOVbC0N5BpY0";
 const API_URL = "/evaluation-service/notifications";
 
@@ -31,8 +30,7 @@ export default function App() {
       });
       
       const data = await response.json();
-      
-      // SAFETY CHECK: Prevents the white screen if the token expires!
+    
       if (!data.notifications || !Array.isArray(data.notifications)) {
         console.error("API did not return notifications. Token might be expired.", data);
         return; 
