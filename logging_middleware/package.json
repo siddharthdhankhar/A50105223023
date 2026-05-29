@@ -1,0 +1,11 @@
+{
+  "name": "logging_middleware",
+  "version": "1.0.0",
+  "description": "Affordmed Reusable Logging Middleware",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Siddharth",
+  "license": "ISC"
+}
